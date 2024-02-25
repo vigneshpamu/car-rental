@@ -183,7 +183,7 @@ const Details = () => {
           >
             Rent at &#8377;{item.rate} / hr
           </button> */}
-          <div className="flex flex-col  overflow-scroll min-w-[350px] h-full  gap-5">
+          <div className="flex flex-col py-10 overflow-scroll min-w-[350px] h-full  gap-5">
             <div className="flex flex-col md:flex-row gap-5">
               <div>
                 <img src={item.img} className="h-full" alt="" />

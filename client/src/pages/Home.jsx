@@ -2,12 +2,14 @@ import { BoxesCore } from '@/components/aceternity/BoxesCore'
 import { cn } from '@/utils/cn'
 import clsx from 'clsx'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   const meteors = new Array(50 || 20).fill(true)
   return (
-    <div className="h-[93vh] mt-20 py-28 bg-slate-900 ">
-      {/* {meteors.map((el, idx) => (
+    <>
+      <div className="max-h-[100vh] mt-20 py-28 bg-slate-900 ">
+        {/* {meteors.map((el, idx) => (
         <span
           key={'meteor' + idx}
           className={cn(
@@ -22,7 +24,7 @@ export default function Home() {
           }}
         ></span>
       ))} */}
-      {/* <div className="relative flex items-center flex-row justify-between  h-full max-w-[1200px] py-5 mx-auto">
+        {/* <div className="relative flex items-center flex-row justify-between  h-full max-w-[1200px] py-5 mx-auto">
         <div>
           <p className="text-white  text-4xl font-semibold">Welcome To </p>
           <p className="text-white  text-5xl font-semibold">
@@ -36,65 +38,114 @@ export default function Home() {
           <img src="/images/hero/hero2.png" className="w-[350px]" alt="" />
         </div>
       </div> */}
-      <div className="max-w-[1200px] mx-auto flex items-center gap-20">
-        <div className="flex flex-col gap-6">
-          <p className="text-white text-2xl font-semibold">
-            Explore the City Your Way
-          </p>
-          <p className="text-white text-4xl font-semibold">
-            Rent Cars and Bikes by Hour
-          </p>
-          <p className="text-white text-xl">
-            Discover the freedom of flexible transportation with our hourly car
-            and bike rental service. Whether you're navigating the urban jungle
-            or exploring scenic routes, we offer convenient options tailored to
-            your schedule and preferences.
-          </p>
-          <div className="text-center flex items-c enter justify-ce nter flex-row gap-5">
-            <a
-              className="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-6 dark:focus:ring-offset-gray-800"
-              href="/sign-up"
-            >
-              Register Now
-              <svg
-                className="flex-shrink-0 size-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinejoin="round"
+        <div className="max-w-[1200px] mx-auto flex items-center gap-20">
+          <div className="flex flex-col gap-6">
+            <p className="text-white text-2xl font-semibold">
+              Explore the City Your Way
+            </p>
+            <p className="text-white text-4xl font-semibold">
+              Rent Cars and Bikes by Hour
+            </p>
+            <p className="text-white text-xl">
+              Discover the freedom of flexible transportation with our hourly
+              car and bike rental service. Whether you're navigating the urban
+              jungle or exploring scenic routes, we offer convenient options
+              tailored to your schedule and preferences.
+            </p>
+            <div className="text-center flex items-c enter justify-ce nter flex-row gap-5">
+              <a
+                className="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-6 dark:focus:ring-offset-gray-800"
+                href="/sign-up"
               >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </a>
-            <a
-              className="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-6 dark:focus:ring-offset-gray-800"
-              href="/category"
-            >
-              Explore Vehicles
-              <svg
-                className="flex-shrink-0 size-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinejoin="round"
+                Register Now
+                <svg
+                  className="flex-shrink-0 size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinejoin="round"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </a>
+              <a
+                className="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-6 dark:focus:ring-offset-gray-800"
+                href="/category"
               >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </a>
+                Explore Vehicles
+                <svg
+                  className="flex-shrink-0 size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinejoin="round"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div className="min-w-[500px]">
+            <img src="/images/hero/new.png" className="w-full h-auto" alt="" />
           </div>
         </div>
-        <div className="min-w-[500px]">
-          <img src="/images/hero/new.png" className="w-full h-auto" alt="" />
-        </div>
       </div>
-    </div>
+      <div className="h-full bg-slate-800 w-full brder -2 py-10">
+        <footer className="bg-white rounded-lg shadow m-4">
+          <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div className="sm:flex sm:items-center sm:justify-between">
+              <a
+                href="/"
+                className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+              >
+                <img
+                  src="/images/logo/logobg.png"
+                  className="h-16"
+                  alt="Flowbite Logo"
+                />
+              </a>
+              <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0">
+                <li>
+                  <a href="/category" className="hover:underline me-4 md:me-6">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="/category" className="hover:underline me-4 md:me-6">
+                    Category
+                  </a>
+                </li>
+                <li>
+                  <a href="/Contact" className="hover:underline me-4 md:me-6">
+                    Contact
+                  </a>
+                </li>
+                {/* <li>
+                  <a href="#" className="hover:underline">
+                    Contact
+                  </a>
+                </li> */}
+              </ul>
+            </div>
+            <hr className="my-6   sm:mx-auto lg:my-8" />
+            <span className="block text-sm text-gray-500 sm:text-center">
+              © 2023{' '}
+              <a href="https://flowbite.com/" className="hover:underline">
+                RentToGo
+              </a>
+              . All Rights Reserved.
+            </span>
+          </div>
+        </footer>
+      </div>
+    </>
   )
 }
