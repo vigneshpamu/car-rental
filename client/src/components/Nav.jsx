@@ -34,13 +34,13 @@ const Nav = ({ currentUser, currentUrl }) => {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img
-              src="/images/logo/logo2.png"
-              className="h-8"
+              src="/images/logo/logo.png"
+              className="h-14"
               alt="Flowbite Logo"
             />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               RentToGo
-            </span>
+            </span> */}
           </a>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             {currentUser ? (
