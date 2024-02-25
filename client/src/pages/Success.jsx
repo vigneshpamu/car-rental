@@ -91,7 +91,7 @@ const Success = () => {
   }
 
   return (
-    <div className="mt-16 bg-slate-900 min-h-[100vh] text-white">
+    <div className="mt-20 bg-slate-900 min-h-[100vh] text-white">
       <div className="max-w-[1200px] py-20 flex flex-col gap-5 items-center justify-center mx-auto ">
         {/* <p className="text-4xl">We have sent you the receipt on your email</p> */}
         <p className="text-4xl">Download the receipt</p>

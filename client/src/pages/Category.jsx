@@ -4,7 +4,7 @@ import { MdDirectionsBike } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 const Category = () => {
   return (
-    <div className="mt-16 bg-slate-900 h-[95vh] text-white">
+    <div className="mt-20 bg-slate-900 h-[95vh] text-white">
       <div className="max-w-[1200px] py-10 flex flex-col items-center justify-center mx-auto">
         <p className="text-3xl mb-20">Select a Category</p>
         <div className="flex flex-row items-start gap-10">

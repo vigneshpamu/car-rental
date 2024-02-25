@@ -6,7 +6,7 @@ import React from 'react'
 export default function Home() {
   const meteors = new Array(50 || 20).fill(true)
   return (
-    <div className="h-[93vh] mt-16 py-28 bg-slate-900 ">
+    <div className="h-[93vh] mt-20 py-28 bg-slate-900 ">
       {/* {meteors.map((el, idx) => (
         <span
           key={'meteor' + idx}

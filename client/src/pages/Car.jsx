@@ -190,7 +190,7 @@ const Car = () => {
     setHour(totalHours)
   }, [startTime, endTime, startDate, endDate])
   return (
-    <div className="mt-16 min-h-[100vh] bg-slate-900">
+    <div className="mt-20 min-h-[100vh] bg-slate-900">
       <div className="max-w-[1200px] mx-auto flex flex-col items-center justify-center gap-10">
         <input
           type="text"

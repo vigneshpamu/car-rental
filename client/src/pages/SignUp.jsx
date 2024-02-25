@@ -48,7 +48,7 @@ const SignUp = () => {
   console.log(formData)
   return (
     <div className="bg-slate-900 py-10 h-[100vh]">
-      <div className="p-8 px-8 border-2 border-gray-200 bg-white mt-16 max-w-lg mx-auto">
+      <div className="p-8 px-8 border-2 border-gray-200 bg-white mt-20 max-w-lg mx-auto">
         <h1 className="text-3xl text-center font-semibold mb-7">Sign Up</h1>
         <form className="flex flex-col gap-4">
           <input

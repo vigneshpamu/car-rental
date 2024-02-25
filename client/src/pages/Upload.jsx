@@ -161,7 +161,7 @@ const Upload = () => {
   }
 
   return (
-    <main className="p-3 max-w-4xl mt-16 mx-auto">
+    <main className="p-3 max-w-4xl mt-20 mx-auto">
       <h1 className="text-3xl font-semibold text-center my-7">Upload Docs</h1>
       <form onSubmit={handleSubmit} className="flex flex-col sm:f ex-row gap-4">
         <div className="flex flex-col gap-4 flex-1">
