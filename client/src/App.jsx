@@ -15,6 +15,7 @@ import Bike from './pages/Bike'
 import Details from './pages/Details'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
@@ -46,6 +47,7 @@ export default function App() {
           /> */}
         </Route>
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
