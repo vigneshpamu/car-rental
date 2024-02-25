@@ -15,16 +15,20 @@ import DateRangeComp from '@/components/DateRangeComp'
 import TimeSelector from '@/components/TimeSelector'
 import { Link, redirect, useNavigate, useParams } from 'react-router-dom'
 import { toast } from '@/components/ui/use-toast'
-import { cars } from '@/data/vehiclesData'
+import { bike, cars } from '@/data/vehiclesData'
 const Details = () => {
   const { index } = useParams()
   const [item, setItem] = useState()
 
   useEffect(() => {
     // const mineData = cars.filter((item) => Number(item.index) === index)
-    const newData = cars.filter((item) => item.index === Number(index))
-    setItem(newData[0])
-    console.log(newData)
+    if (index > 10) {
+      const newData = bike.filter((item) => item.index === Number(index))
+      setItem(newData[0])
+    } else {
+      const newData = cars.filter((item) => item.index === Number(index))
+      setItem(newData[0])
+    }
   }, [index])
 
   let navigate = useNavigate()

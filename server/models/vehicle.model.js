@@ -2,6 +2,7 @@ import mongoose from 'mongoose'
 
 const vehicleSchema = new mongoose.Schema(
   {
+    category: { type: String, default: '' },
     index: { type: Number },
     make: { type: String, default: '' },
     model: { type: String, default: '' },

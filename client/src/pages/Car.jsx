@@ -152,9 +152,11 @@ const Car = () => {
         const response = await axios.get(
           'http://localhost:3003/api/vehicle/get'
         )
+
+        const fData = response.data.filter((item) => item.category === 'car')
         // Set the data in state
-        setData(response.data)
-        setDataNew(response.data)
+        setData(fData)
+        setDataNew(fData)
       } catch (error) {
         console.error('Error fetching data:', error)
       }

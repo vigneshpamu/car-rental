@@ -2,11 +2,44 @@ import User from '../models/user.model.js'
 import bcryptjs from 'bcryptjs'
 import { errorHandler } from '../utils/error.js'
 import jwt from 'jsonwebtoken'
-
+import nodemailer from 'nodemailer'
 export const signUp = async (req, res, next) => {
   const { name, email, password } = req.body
   const hashedPassword = bcryptjs.hashSync(password, 10)
   const newUser = new User({ name, email, password: hashedPassword })
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'vigneshpamu2002@gmail.com',
+      pass: 'xpnjmyirlvcnaycz',
+    },
+  })
+  const link = `http://localhost:3006/sign-in`
+
+  //2.configure email content.
+  const mailOptions = {
+    from: 'vigneshpamu2002@gmail.com',
+    to: `${email}`,
+    subject: 'Your Account is Created Successfully',
+    text: 'Your Account is Created Successfully',
+    html: `<div style="">
+    <p>Login in to your account</p>
+    
+    
+<a href=${link}>
+  <button style="background-color: #3399ff; padding: 10px; font-size:24px;color: white;">Sign - In
+  </button>
+</a>
+    </div>`,
+  }
+
+  //3. send email
+  try {
+    const result = await transporter.sendMail(mailOptions)
+    console.log('Eamil sent successfully')
+  } catch (error) {
+    console.log('Email send failed with error:', error)
+  }
   try {
     await newUser.save()
     res.status(201).json(newUser)

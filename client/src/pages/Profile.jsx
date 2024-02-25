@@ -23,7 +23,6 @@ import {
 import { app } from '../firebase'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import { newCar } from '@/data/vehiclesData'
 
 const Profile = () => {
   const fileRef = useRef(null)
@@ -155,8 +154,8 @@ const Profile = () => {
       //   return
       // }
       // setUserListings(data)'
-      const extractedData = extractCarData(response.data, newCar)
-      console.log(extractedData, 'Final Data')
+      // const extractedData = extractCarData(response.data, newCar)
+      // console.log(extractedData, 'Final Data')
     } catch (error) {
       console.error('Error fetching data:', error)
       setShowListingError(true)

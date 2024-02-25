@@ -14,6 +14,7 @@ import Car from './pages/Car'
 import Bike from './pages/Bike'
 import Details from './pages/Details'
 import About from './pages/About'
+import Contact from './pages/Contact'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         {/* <Route path="/search" element={<Search />} /> */}
         {/* <Route path="/listing/:listingId" element={<Listing />} /> */}
         {/* <Route path="/category" element={<Category />}>
