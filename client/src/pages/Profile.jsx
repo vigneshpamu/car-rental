@@ -21,7 +21,7 @@ import {
   signOutUserFailure,
 } from '../redux/user/userSlice'
 import { app } from '../firebase'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 const Profile = () => {
@@ -37,6 +37,7 @@ const Profile = () => {
   const dispatch = useDispatch()
   const [showListingError, setShowListingError] = useState(false)
   const [userListings, setUserListings] = useState([])
+  const navigate = useNavigate()
   useEffect(() => {
     if (file) {
       handleFileUpload(file)
@@ -103,7 +104,13 @@ const Profile = () => {
         variant: 'success',
         // description: 'Friday, February 10, 2023 at 5:57 PM',
       })
+      navigate('/')
     } catch (error) {
+      toast({
+        title: 'User Not Updated',
+        variant: 'destructive',
+        // description: 'Friday, February 10, 2023 at 5:57 PM',
+      })
       dispatch(updateUserFailure(error.message))
     }
   }

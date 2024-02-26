@@ -68,10 +68,11 @@ const SignUp = () => {
             required
           />
           <input
-            type="text"
+            // type="text"
             placeholder="Password"
             className="border p-3 rounded-lg"
             id="password"
+            type="password"
             onChange={handleChange}
             required
           />

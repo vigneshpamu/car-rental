@@ -18,7 +18,7 @@ const Contact = () => {
     }
   }
   return (
-    <div className="mt-20 bg-slate-900 h-[100vh] text-white">
+    <div className="mt-20 bg-slate-900 min-h-[100vh] pb-20 text-white">
       <div className="max-w-[1200px] py-10  mx-auto">
         <p className="text-3xl mb-20 w-full text-center">Contact Us</p>
 

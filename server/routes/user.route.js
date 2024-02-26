@@ -13,7 +13,7 @@ const router = express.Router()
 
 router.get('/test', test)
 router.post('/upload', upload)
-router.post('/update/:id', verifyToken, updateUser)
+router.post('/update/:id', updateUser)
 router.delete('/delete/:id', verifyToken, deleteUser)
 router.get('/:id', verifyToken, getUser)
 router.post('/send-email', sendEmail)

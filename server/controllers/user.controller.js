@@ -10,12 +10,12 @@ export const test = (req, res) => {
 }
 
 export const updateUser = async (req, res, next) => {
-  if (req.user.id !== req.params.id)
-    return next(errorHandler(401, 'You can only update your own account!'))
+  // if (req.user.id !== req.params.id)
+  //   return next(errorHandler(401, 'You can only update your own account!'))
   try {
-    if (req.body.password) {
-      req.body.password = bcryptjs.hashSync(req.body.password, 10)
-    }
+    // if (req.body.password) {
+    //   req.body.password = bcryptjs.hashSync(req.body.password, 10)
+    // }
 
     const updatedUser = await User.findByIdAndUpdate(
       req.params.id,
@@ -124,7 +124,7 @@ export const sendEmail = async (req, res, next) => {
     //2.configure email content.
     const mailOptions = {
       from: 'vigneshpamu2002@gmail.com',
-      to: 'vigneshpamu2002@gmail.com',
+      to: email,
       subject: 'Your Order is Placed Successfully',
       text: 'This is an email using nodemail in nodejs',
       html: `<div style="">

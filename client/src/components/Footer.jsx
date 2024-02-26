@@ -16,22 +16,28 @@ const Footer = () => {
                 alt="Flowbite Logo"
               />
             </a>
-            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0">
-              <li>
-                <a href="/category" className="hover:underline me-4 md:me-6">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="/category" className="hover:underline me-4 md:me-6">
-                  Category
-                </a>
-              </li>
-              <li>
-                <a href="/Contact" className="hover:underline me-4 md:me-6">
-                  Contact
-                </a>
-              </li>
+            <ul className="flex flex-col items-start gap-7 mb-6 text-sm font-medium text-gray-500 sm:mb-0">
+              <div className="flex flex-row">
+                <li>
+                  <a href="/category" className="hover:underline me-4 md:me-6">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="/category" className="hover:underline me-4 md:me-6">
+                    Category
+                  </a>
+                </li>
+                <li>
+                  <a href="/Contact" className="hover:underline me-4 md:me-6">
+                    Contact
+                  </a>
+                </li>
+              </div>
+              <div>
+                <p>renttogowyw@gmail.com</p>
+                <p>+91 85918 99486</p>
+              </div>
               {/* <li>
                   <a href="#" className="hover:underline">
                     Contact
